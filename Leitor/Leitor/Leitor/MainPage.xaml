@@ -2,13 +2,28 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:Leitor"
-             x:Class="Leitor.MainPage">
+             x:Class="Leitor.MainPage" Title="Leitor" >
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Icon="information.png" Clicked="InfoClicked"/>
+    </ContentPage.ToolbarItems>
+    <ScrollView>
+        <StackLayout VerticalOptions="Center">
+            <StackLayout Orientation="Horizontal" 
+                         HorizontalOptions="Center" 
+                         VerticalOptions="Center" x:Name="Elementos" >
+                <Button Clicked="TakePicture"  TextColor="White" Text="&#xf083;" FontSize="100" BackgroundColor="{StaticResource Primary}" WidthRequest="200" HeightRequest="200" CornerRadius="400">
+                    <Button.FontFamily>
+                        <OnPlatform x:TypeArguments="x:String"  Android="fa-solid-900.ttf#Font Awesome 5 Free Regular" 
+                                                            iOS="Font Awesome 5 Free"/>
+                    </Button.FontFamily>
+                </Button>
+            </StackLayout>
 
-    <StackLayout>
-        <!-- Place new controls here -->
-    	<Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
+            <ActivityIndicator IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}"
+                                   VerticalOptions="FillAndExpand" HorizontalOptions="CenterAndExpand" 
+                                   Color="{StaticResource Primary}" />
+
+        </StackLayout>
+    </ScrollView>
 
 </ContentPage>

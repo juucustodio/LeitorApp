@@ -5,6 +5,20 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="3.0.0.482510" />
+    <PackageReference Include="Microsoft.ProjectOxford.Common.DotNetStandard" Version="1.0.0" />
+    <PackageReference Include="Microsoft.ProjectOxford.Vision" Version="1.0.393" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="Xam.Plugin.Media" Version="4.0.1.1" />
+    <PackageReference Include="Xam.Plugins.TextToSpeech" Version="4.0.0.7" />
+    <PackageReference Include="Xamarin.Forms" Version="3.1.0.583944" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Detalhe.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="InfoPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

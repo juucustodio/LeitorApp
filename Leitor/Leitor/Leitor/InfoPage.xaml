@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Leitor.InfoPage" Title="Sobre">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center">
+            <Label Margin="20,20,20,50"  Style="{StaticResource MainBodyLabel}" 
+                                HorizontalTextAlignment="Center"  
+                                Text="Leitor App é um leitor de cartas ou bilhetes manuscritos destinado às pessoas que por algum motivo não estão aptas a ler o mesmo." />
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="10,0,0,0">
+                <Label Text="&#xf082;" FontSize="50" TextColor="{StaticResource Primary}" HorizontalTextAlignment="Center">
+                    <Label.FontFamily>
+                        <OnPlatform x:TypeArguments="x:String" Android="fa-brands-400.ttf#Font Awesome 5 Free Regular" 
+                                                       iOS="Font Awesome 5 Free"/>
+                    </Label.FontFamily>
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Facebook" />
+                    </Label.GestureRecognizers>
+                </Label>
+
+                <Label Text="&#xf081;" FontSize="50"  TextColor="{StaticResource Primary}" HorizontalTextAlignment="Center">
+                    <Label.FontFamily>
+                        <OnPlatform x:TypeArguments="x:String" Android="fa-brands-400.ttf#Font Awesome 5 Free Regular" 
+                                                       iOS="Font Awesome 5 Free"/>
+                    </Label.FontFamily>
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Twitter" />
+                    </Label.GestureRecognizers>
+                </Label>
+
+                <Label Text="&#xf092;" FontSize="50"  TextColor="{StaticResource Primary}" HorizontalTextAlignment="Center">
+                    <Label.FontFamily>
+                        <OnPlatform x:TypeArguments="x:String" Android="fa-brands-400.ttf#Font Awesome 5 Free Regular" 
+                                                       iOS="Font Awesome 5 Free"/>
+                    </Label.FontFamily>
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="GitHub" />
+                    </Label.GestureRecognizers>
+                </Label>
+
+            </StackLayout>
+
+
+            <Label VerticalOptions="End" HorizontalTextAlignment="Center" Text="Versão: 1.0.0"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
